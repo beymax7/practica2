@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block header %}{% endblock %}
+
+{% block content %}
+<h2>Inscripción en curso</h2>
+<form method="POST">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre"><br><br>
+
+    <label for="apellidos">Apellidos:</label>
+    <input type="text" id="apellidos" name="apellidos"><br><br>
+
+    <label for="curso">Curso:</label>
+    <select id="curso" name="curso">
+        <option value="Matemáticas">Matemáticas</option>
+        <option value="Historia">Historia</option>
+        <option value="Inglés">Inglés</option>
+    </select><br><br>
+
+    <input type="submit" value="Enviar">
+</form>
+{% endblock %}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Flask</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Bienvenido al menú de formularios</h1>
+    <p>Selecciona una opción del menú para comenzar.</p>
+    
+    {% if mostrar_menu %}
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Inicio</a></li>
+            <li><a href="{{ url_for('curso') }}">Inscripción en curso</a></li>
+            <li><a href="{{ url_for('usuario') }}">Registro de usuarios</a></li>
+            <li><a href="{{ url_for('producto') }}">Registro de productos</a></li>
+            <li><a href="{{ url_for('libro') }}">Registro de libros</a></li>
+        </ul>
+    </nav>
+    {% endif %}
+    <hr>
+    <div>
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
